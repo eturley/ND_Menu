@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @eatery.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @eatery.description %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @eatery.location %>
+</p>
+
+<%= link_to 'Edit', edit_eatery_path(@eatery) %> |
+<%= link_to 'Back', eateries_path %>
