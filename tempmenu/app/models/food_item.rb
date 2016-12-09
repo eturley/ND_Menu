@@ -1,3 +1,3 @@
 class FoodItem < ApplicationRecord
-	belongs_to :eatery
+	belongs_to :Eatery
 end
