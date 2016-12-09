@@ -10,5 +10,10 @@
   <%= @food_item.price %>
 </p>
 
+<p>
+	<strong>Eatery:</strong>
+	<%= @food_item.eatery %>
+</p>
+
 <%= link_to 'Edit', edit_food_item_path(@food_item) %> |
 <%= link_to 'Back', food_items_path %>

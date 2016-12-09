@@ -21,6 +21,11 @@
     <%= f.text_field :price %>
   </div>
 
+  <div class="field">
+    <%= f.collection_select :food_item_id, Eatery.all, :id, :name, prompt: "Select an eatery" %>
+  <div>
+
+
   <div class="actions">
     <%= f.submit %>
   </div>
