@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :ratings
   get 'home/index'
   root 'home#index'
 
