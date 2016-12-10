@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :date_ranges
   resources :users
   resources :food_items
   resources :eateries
