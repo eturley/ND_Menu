@@ -38,11 +38,6 @@ ActiveRecord::Schema.define(version: 20161210190326) do
     t.integer  "eatery_id"
   end
 
-  create_table "menus", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string   "email"
     t.string   "password"

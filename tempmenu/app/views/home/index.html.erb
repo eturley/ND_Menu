@@ -1,5 +1,8 @@
-<div class="row align-middle h-100">
-  <div class="column">
+<div class="row column">
     <h1>Welcome to <strong>ND-Menu</strong>!</h1>
-  </div>
+
+    <%= form_for @user do |f| %>
+      <%= f.label :email %>
+      <%= f.email_field :email %>
+    <% end %>
 </div>
