@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'protected_controller/require_user'
+
   post 'auth/login' => 'auth#login', as: :login
   get 'auth/logout' => 'auth#logout', as: :logout
 

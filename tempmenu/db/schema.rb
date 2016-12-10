@@ -38,11 +38,6 @@ ActiveRecord::Schema.define(version: 20161210211142) do
     t.integer  "eatery_id"
   end
 
-  create_table "menus", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "ratings", force: :cascade do |t|
     t.text     "description"
     t.integer  "stars"
