@@ -15,5 +15,13 @@
   <%= @eatery.location %>
 </p>
 
+<p>
+	<strong>Menu Items:</strong>
+	<ul>
+		<% @eatery.food_items.each do | food_item | %>
+			<li><%= food_item.name %> <%= food_item.full_price %></li>
+		<% end %>
+	</ul>
+</p>
 <%= link_to 'Edit', edit_eatery_path(@eatery) %> |
 <%= link_to 'Back', eateries_path %>
