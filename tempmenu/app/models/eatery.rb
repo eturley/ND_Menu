@@ -12,4 +12,13 @@ class Eatery < ApplicationRecord
 		return size
 	end
 
+	def average
+		total = 0
+		self.ratings.each do |r|
+			total = total + r.stars
+		end
+		avg = total/self.ratings.count
+		return avg
+	end
+
 end

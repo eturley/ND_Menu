@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'home/index' => 'home#index', as: :home
   root 'home#index'
 
+  resources :ratings
   resources :date_ranges
   resources :users
   resources :food_items
