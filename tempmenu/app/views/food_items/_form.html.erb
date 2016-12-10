@@ -22,8 +22,8 @@
   </div>
 
   <div class="field">
-    <%= f.label :Eatery_id %> <br>
-    <%= f.collection_select :eatery_id, Eatery.all, :id, :name, prompt: "Select an eatery" %>
+    <%= f.label :eatery_id %> <br>
+    <%= f.collection_select :eatery_id, Eatery.all, :id, :name, prompt: true %>
   <div>
 
   <br>
