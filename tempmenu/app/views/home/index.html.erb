@@ -1,8 +1,24 @@
-<div class="row column">
+<main class="row align-middle" style="height:75%">
+  <div class="column card">
+
     <h1>Welcome to <strong>ND-Menu</strong>!</h1>
 
     <%= form_for @user do |f| %>
-      <%= f.label :email %>
-      <%= f.email_field :email %>
+      <div class="row">
+        <div class="medium-5 columns">
+          <%= f.label :email %>
+          <%= f.email_field :email %>
+        </div>
+        <div class="medium-5 columns">
+          <%= f.label :password %>
+          <%= f.password_field :password %>
+        </div>
+        <div class="medium-2 columns">
+          <label>&nbsp;</label><!--fix spacing-->
+          <%= f.submit 'Login', :class=>'primary button' %>
+        </div>
+      </div>
     <% end %>
-</div>
+
+  </div>
+</main>

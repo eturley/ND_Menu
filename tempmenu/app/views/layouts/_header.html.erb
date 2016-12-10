@@ -1,1 +1,22 @@
-<h1>Notre Dame Menus</h1>
+<nav class="top-bar">
+
+  <div class="top-bar-left">
+    <ul class="dropdown menu" data-dropdown-menu>
+      <li class="menu-text">
+        <span class="float-right"><i class="fa fa-cutlery"></i></span>
+        ND Menu&nbsp;&nbsp;
+      </li>
+      <li><%= link_to 'Eateries', eateries_path %></li>
+      <li><%= link_to 'Food Stuffs', food_items_path %></li>
+    </ul>
+  </div>
+
+  <div class="top-bar-right">
+    <ul class="menu">
+      <li><input type="search" placeholder="Search (WIP)"></li>
+      <li><button class="secondary button"><i class="fa fa-search"></i></button></li>
+    </ul>
+  </div>
+
+</nav>
+
