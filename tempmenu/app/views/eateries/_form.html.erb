@@ -1,4 +1,4 @@
-<%= form_for(eatery) do |f| %>
+<%= form_for eatery do |f| %>
   <% if eatery.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(eatery.errors.count, "error") %> prohibited this eatery from being saved:</h2>
@@ -27,10 +27,10 @@
   </div>
 
   <div class="field">
-    <%= f.
+  </div>
 
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Update', class: 'success button' %>
   </div>
 <% end %>

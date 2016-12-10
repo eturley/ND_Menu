@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
-  get 'home/index'
+  post 'auth/login' => 'auth#login', as: :login
+  get 'auth/logout' => 'auth#logout', as: :logout
+
+  get 'home/index' => 'home#index', as: :home
   root 'home#index'
 
   resources :date_ranges

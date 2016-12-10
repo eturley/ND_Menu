@@ -3,7 +3,7 @@
 
     <h1>Welcome to <strong>ND-Menu</strong>!</h1>
 
-    <%= form_for @user do |f| %>
+    <%= form_for @user, url: login_path do |f| %>
       <div class="row">
         <div class="medium-5 columns">
           <%= f.label :email %>
@@ -17,6 +17,12 @@
           <label>&nbsp;</label><!--fix spacing-->
           <%= f.submit 'Login', :class=>'primary button' %>
         </div>
+      </div>
+    <% end %>
+
+    <% if flash[:message] %>
+      <div class="<%= flash[:class] %> callout">
+        <%= flash[:message] %>
       </div>
     <% end %>
 

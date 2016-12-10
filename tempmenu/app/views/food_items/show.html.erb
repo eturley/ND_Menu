@@ -1,19 +1,25 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @food_item.name %>
-</p>
+<div class="row">
+  <div class="column card">
 
-<p>
-  <strong>Price:</strong>
-  <%= @food_item.full_price %>
-</p>
+    <p>
+      <strong>Name:</strong>
+      <%= @food_item.name %>
+    </p>
 
-<p>
-	<strong>Eatery:</strong>
-	<%= @food_item.eatery.name %>
-</p>
+    <p>
+      <strong>Price:</strong>
+      <%= @food_item.full_price %>
+    </p>
 
-<%= link_to 'Edit', edit_food_item_path(@food_item) %> |
-<%= link_to 'Back', food_items_path %>
+    <p>
+    	<strong>Eatery:</strong>
+    	<%= @food_item.eatery.name %>
+    </p>
+
+    <%= link_to 'Edit', edit_food_item_path(@food_item) %> |
+    <%= link_to 'Back', food_items_path %>
+
+  </div>
+</div>

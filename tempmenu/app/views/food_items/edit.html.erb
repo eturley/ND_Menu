@@ -1,6 +1,12 @@
-<h1>Editing Food Item</h1>
+<div class="row">
+  <div class="column card">
 
-<%= render 'form', food_item: @food_item %>
+    <h1>Editing Food Item</h1>
 
-<%= link_to 'Show', @food_item %> |
-<%= link_to 'Back', food_items_path %>
+    <%= render 'form', food_item: @food_item %>
+
+    <%= link_to 'Show', @food_item %> |
+    <%= link_to 'Back', food_items_path %>
+
+  </div>
+</div>
