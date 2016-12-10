@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'home/index'
   root 'home#index'
 
+  resources :date_ranges
   resources :users
   resources :food_items
   resources :eateries
