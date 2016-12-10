@@ -8,4 +8,5 @@ class FoodItem < ApplicationRecord
   	line = line + adjusted_price.to_s
   	return line
   end
+  
 end
