@@ -5,31 +5,14 @@
 
     <h1>Eateries</h1>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Description</th>
-          <th>Location</th>
-          <th>Inventory</th>
-          <th colspan="3"></th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <% @eateries.each do |eatery| %>
-          <tr>
-            <td><%= eatery.name %></td>
-            <td><%= eatery.description %></td>
-            <td><%= eatery.location %></td>
-            <td><%= eatery.inventory %></td>
-            <td><%= link_to 'Show', eatery %></td>
-            <td><%= link_to 'Edit', edit_eatery_path(eatery) %></td>
-            <td><%= link_to 'Destroy', eatery, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          </tr>
+    <ul class="no-style">
+        <% @eateries.each_with_index do |eatery, i| %>
+            <li><%= render eatery %></li>
+            <% if i < @eateries.count - 1%>
+                <hr>
+            <% end %>
         <% end %>
-      </tbody>
-    </table>
+    </ul>
 
     <br>
 

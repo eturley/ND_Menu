@@ -11,4 +11,8 @@ class FoodItem < ApplicationRecord
   	return line
   end
 
+  def to_s
+    name
+  end
+
 end

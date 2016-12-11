@@ -24,7 +24,7 @@
 .card{
   background-color: white;
   box-shadow: 4px 4px 8px 2px #333;
-  padding: 15px;
+  padding: 25px;
   margin: 15px;
 }
 
@@ -33,6 +33,7 @@ body{
   background-size:  cover;
   background-repeat:   no-repeat;
   background-position: center center;
+  // transition: background-image 0.1s ease-out;
 }
 
 label{
@@ -49,6 +50,16 @@ label{
   &:visited{
     color: black;
   }
+}
+
+ul.no-style{
+    list-style-type: none;
+}
+
+.thumbnail{
+    img{
+        width: 135px;
+    }
 }
 
 .top-bar{

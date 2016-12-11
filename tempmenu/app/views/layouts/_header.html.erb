@@ -14,7 +14,7 @@
         <li><%= link_to 'Ratings', ratings_path %></li>
       <% end %>
       <% if session[:user_id] %>
-        <li><%= link_to 'Logout', logout_path %></li>
+        <li><%= link_to "Logout (#{User.find_by_id(session[:user_id]).email})", logout_path %></li>
       <% end %>
     </ul>
   </div>

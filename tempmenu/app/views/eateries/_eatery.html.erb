@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="small-3 columns">
+        <div class="thumbnail">
+            <img src="/assets/<%= eatery.name %>.jpg">
+        </div>
+    </div>
+    <div class="small-5 columns">
+        <h4><%= eatery.name %></h4>
+        <p><%= eatery.description %></p>
+        <label>menu sample:</label>
+        <% eatery.food_items.sample(3).each_with_index do |f, i| %>
+            <%= "#{f}#{', ' if i < 2 and i < eatery.food_items.count - 1}" %>
+        <% end %>
+        <% if eatery.food_items.empty? %>
+            <i>no items</i>
+        <% end %>
+    </div>
+    <div class="small-4 columns">
+        <label>location:</label>
+        <p><%= eatery.location %></p>
+        <label>inventory:</label>
+        <p><%= eatery.inventory %></p>
+    </div>
+</div>
+<div class="row column text-right">
+    <!--
+    <%= link_to 'Show', eatery %> |
+    -->
+    <%= link_to 'Edit', edit_eatery_path(eatery) %> |
+    <%= link_to 'Remove', eatery, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>
