@@ -1,5 +1,5 @@
 class Rating < ApplicationRecord
 	belongs_to :eatery
 
-	validates :name, :eatery, presence: true
+	validates :stars, :eatery, presence: true
 end
