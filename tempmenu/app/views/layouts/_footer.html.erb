@@ -1,5 +1,10 @@
-<div class="row column footer-bottom">
-  <footer class="footer">
-    <small><i>Created by Will Badart, Jamie Maher, and Erin Turley</i></small>
-  </footer>
-</div>
+<footer class="row column footer-bottom">
+  <span class="float-right"><small>
+    <i>Created by Will Badart, Jamie Maher, and Erin Turley</i>
+  </small></span>
+  <% if session[:user_id] %>
+    <small>
+      logged in as <%= User.find_by_id(session[:user_id]).email %>
+    </small>
+  <% end %></p>
+</footer>
