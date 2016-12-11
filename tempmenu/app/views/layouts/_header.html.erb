@@ -11,7 +11,7 @@
       <li><%= link_to 'Eateries', eateries_path %></li>
       <li><%= link_to 'Food Stuffs', food_items_path %></li>
       <% if session[:user_id] %>
-        <li><%= link_to 'Ratings', logout_path %></li>
+        <li><%= link_to 'Ratings', ratings_path %></li>
       <% end %>
       <% if session[:user_id] %>
         <li><%= link_to 'Logout', logout_path %></li>

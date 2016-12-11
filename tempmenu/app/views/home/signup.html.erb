@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="column card">
+    <h3>Signup</h3>
+    <%= form_for @user, url: new_user_path do |f| %>
+      <div class="row">
+        <div class="medium-5 columns">
+          <%= f.label :email %>
+          <%= f.email_field :email %>
+        </div>
+        <div class="medium-5 columns">
+          <%= f.label :password %>
+          <%= f.password_field :password %>
+        </div>
+        <div class="medium-2 columns">
+          <label>&nbsp;</label>
+          <%= f.submit 'Signup', class: 'success button' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

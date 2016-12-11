@@ -20,6 +20,8 @@
       </div>
     <% end %>
 
+    <p><%= link_to 'Need an account?', signup_path %></p>
+
     <% if flash[:message] %>
       <div class="<%= flash[:class] %> callout">
         <%= flash[:message] %>

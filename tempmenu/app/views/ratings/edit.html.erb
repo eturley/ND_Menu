@@ -1,6 +1,13 @@
 <h1>Editing Rating</h1>
 
-<%= render 'form', rating: @rating %>
 
-<%= link_to 'Show', @rating %> |
-<%= link_to 'Back', ratings_path %>
+<div class="row">
+  <div class="column card">
+
+    <%= render 'form', rating: @rating %>
+
+    <%= link_to 'Show', @rating %> |
+    <%= link_to 'Back', ratings_path %>
+
+  </div>
+</div>

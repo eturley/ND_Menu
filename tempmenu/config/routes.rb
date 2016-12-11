@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get 'auth/logout' => 'auth#logout', as: :logout
 
   get 'home/index' => 'home#index', as: :home
+  get 'signup'     => 'home#signup', as: :signup
+  post 'home/signup' => 'home#save_user', as: :new_user
   root 'home#index'
 
   resources :ratings

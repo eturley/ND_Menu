@@ -1,14 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @rating.description %>
-</p>
+<div class="row">
+  <div class="column card">
 
-<p>
-  <strong>Stars:</strong>
-  <%= @rating.stars %>
-</p>
+    <p>
+      <strong>Description:</strong>
+      <%= @rating.description %>
+    </p>
 
-<%= link_to 'Edit', edit_rating_path(@rating) %> |
-<%= link_to 'Back', ratings_path %>
+    <p>
+      <strong>Stars:</strong>
+      <%= @rating.stars %>
+    </p>
+
+    <%= link_to 'Edit', edit_rating_path(@rating) %> |
+    <%= link_to 'Back', ratings_path %>
+
+  </div>
+</div>

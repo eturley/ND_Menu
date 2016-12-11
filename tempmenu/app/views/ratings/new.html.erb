@@ -1,5 +1,11 @@
 <h1>New Rating</h1>
 
-<%= render 'form', rating: @rating %>
+<div class="row">
+  <div class="column card">
 
-<%= link_to 'Back', ratings_path %>
+    <%= render 'form', rating: @rating %>
+
+    <%= link_to 'Back', ratings_path %>
+
+  </div>
+</div>
