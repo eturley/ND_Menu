@@ -16,16 +16,16 @@
               <i>no items</i>
           <% end %>
         </p>
-        <p>
-          <label>rating</label>
-          <%= render 'layouts/rating', :@eatery => eatery %>
-        </p>
     </div>
     <div class="small-4 columns">
         <label>location:</label>
         <p><%= eatery.location %></p>
-        <label>inventory:</label>
-        <p><%= eatery.inventory %></p>
+        <%# <label>inventory:</label> %>
+        <%# <p><%= eatery.inventory %1></p> %>
+        <label>rating</label>
+        <p>
+          <%= render 'layouts/rating', :@eatery => eatery %>
+        </p>
     </div>
 </div>
 <div class="row column text-right">
