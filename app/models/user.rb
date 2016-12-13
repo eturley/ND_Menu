@@ -3,7 +3,6 @@ class User < ApplicationRecord
   validates :email, :password, presence: true
 
   def name
-  	string_name = self.email
-  	return string_name[/[^@]+/]
+  	self.email[/[^@]+/]
   end
 end
