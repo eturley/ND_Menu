@@ -4,6 +4,6 @@ class User < ApplicationRecord
 
   def name
   	string_name = self.email
-  	return my_string[/[^@]+/]
+  	return string_name[/[^@]+/]
   end
 end
