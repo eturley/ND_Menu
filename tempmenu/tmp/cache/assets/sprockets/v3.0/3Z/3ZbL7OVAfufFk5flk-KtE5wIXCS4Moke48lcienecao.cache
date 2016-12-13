@@ -1,0 +1,5 @@
+I"P(function() {
+  $(document).ready($(document).foundation);
+
+}).call(this);
+:ET
