@@ -1,7 +1,7 @@
-<p id="notice"><%= notice %></p>
-
 <div class="row">
   <div class="column card">
+
+    <p id="notice"><%= notice %></p>
 
     <p>
       <strong>Name:</strong>
@@ -16,6 +16,11 @@
     <p>
       <strong>Location:</strong>
       <%= @eatery.location %>
+    </p>
+
+    <p>
+      <strong>Rating:</strong>
+      <%= render 'layouts/rating' %>
     </p>
 
     <p>

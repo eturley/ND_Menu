@@ -17,8 +17,10 @@ class Eatery < ApplicationRecord
 		self.ratings.each do |r|
 			total = total + r.stars
 		end
-		avg = total/self.ratings.count
-		return avg
+    if self.ratings.count == 0
+      return 0
+    end
+		total/self.ratings.count
 	end
 
 end

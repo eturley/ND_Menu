@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161210211142) do
+ActiveRecord::Schema.define(version: 20161211002052) do
 
   create_table "date_ranges", force: :cascade do |t|
     t.datetime "start"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20161210211142) do
     t.string   "start_time"
     t.string   "end_time"
     t.string   "days"
+    t.integer  "rating_idwq"
   end
 
   create_table "food_items", force: :cascade do |t|
@@ -43,6 +44,7 @@ ActiveRecord::Schema.define(version: 20161210211142) do
     t.integer  "stars"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "eatery_id"
   end
 
   create_table "users", force: :cascade do |t|
