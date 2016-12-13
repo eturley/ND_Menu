@@ -7,13 +7,19 @@
     <div class="small-5 columns">
         <h4><%= eatery.name %></h4>
         <p><%= eatery.description %></p>
-        <label>menu sample:</label>
-        <% eatery.food_items.sample(3).each_with_index do |f, i| %>
-            <%= "#{f}#{', ' if i < 2 and i < eatery.food_items.count - 1}" %>
-        <% end %>
-        <% if eatery.food_items.empty? %>
-            <i>no items</i>
-        <% end %>
+        <p>
+          <label>menu sample:</label>
+          <% eatery.food_items.sample(3).each_with_index do |f, i| %>
+              <%= "#{f}#{', ' if i < 2 and i < eatery.food_items.count - 1}" %>
+          <% end %>
+          <% if eatery.food_items.empty? %>
+              <i>no items</i>
+          <% end %>
+        </p>
+        <p>
+          <label>rating</label>
+          <%= render 'layouts/rating', :@eatery => eatery %>
+        </p>
     </div>
     <div class="small-4 columns">
         <label>location:</label>
