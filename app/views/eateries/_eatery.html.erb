@@ -29,7 +29,9 @@
     </div>
 </div>
 <div class="row column text-right">
-    <%= link_to 'Details', eatery %> |
+    <%= link_to 'Details', eatery %> 
+    <% if session[:user_id] %>|
     <%= link_to 'Edit', edit_eatery_path(eatery) %> |
     <%= link_to 'Remove', eatery, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
 </div>
