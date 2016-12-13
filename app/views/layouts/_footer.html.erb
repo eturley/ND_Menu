@@ -4,7 +4,7 @@
   </small></span>
   <% if session[:user_id] %>
     <small>
-      logged in as <%= User.find_by_id(session[:user_id]).email %>
+      logged in as <%= User.find_by_id(session[:user_id]).name %>
     </small>
   <% end %></p>
 </footer>
