@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'search/index'
+
   get 'protected_controller/require_user'
 
   post 'auth/login' => 'auth#login', as: :login
@@ -9,6 +11,8 @@ Rails.application.routes.draw do
   get 'signup'     => 'home#signup', as: :signup
   post 'home/signup' => 'home#save_user', as: :new_user
   root 'home#index'
+
+  post 'search' => 'search#index', as: :search
 
   resources :ratings
   resources :date_ranges

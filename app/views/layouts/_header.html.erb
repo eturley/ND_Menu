@@ -22,7 +22,13 @@
   <div class="top-bar-right">
     <ul class="menu">
       <li><input type="search" placeholder="Search (WIP)"></li>
-      <li><button class="secondary button"><i class="fa fa-search"></i></button></li>
+      <li>
+        <%= link_to search_path, keyword: @keyword do %>
+          <button class="secondary button">
+            <i class="fa fa-search"></i>
+          </button>
+        <% end %>
+      </li>
     </ul>
   </div>
 
