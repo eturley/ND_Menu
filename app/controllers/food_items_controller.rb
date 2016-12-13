@@ -14,11 +14,21 @@ class FoodItemsController < ApplicationController
 
   # GET /food_items/new
   def new
+    if not session[:user_id]
+      flash[:message] = 'Must be logged in'
+      flash[:class]   = 'alert'
+      redirect_to home_path
+    end
     @food_item = FoodItem.new
   end
 
   # GET /food_items/1/edit
   def edit
+    if not session[:user_id]
+      flash[:message] = 'Must be logged in'
+      flash[:class]   = 'alert'
+      redirect_to home_path
+    end
   end
 
   # POST /food_items

@@ -14,11 +14,21 @@ class EateriesController < ApplicationController
 
   # GET /eateries/new
   def new
+    if not session[:user_id]
+      flash[:message] = 'Must be logged in'
+      flash[:class]   = 'alert'
+      redirect_to home_path
+    end
     @eatery = Eatery.new
   end
 
   # GET /eateries/1/edit
   def edit
+    if not session[:user_id]
+      flash[:message] = 'Must be logged in'
+      flash[:class]   = 'alert'
+      redirect_to home_path
+    end
   end
 
   # POST /eateries
