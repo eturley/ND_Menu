@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   post 'home/signup' => 'home#save_user', as: :new_user
   root 'home#index'
 
-  post 'search' => 'search#index', as: :search
+  get 'search/(:keyword)' => 'search#index', as: :search
 
   resources :ratings
   resources :date_ranges
